@@ -188,23 +188,70 @@ form button[type="submit"]:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
+
+.menu li a {
+    transition: background-color 0.5s ease,
+                transform 0.5s ease,
+                box-shadow 0.5s ease;
+}
+
+.menu li a:hover {
+    background-color: #7986cb !important;
+    transform: translateX(20px) scale(1.08);
+    box-shadow: 0 0 18px #c5cae9;
+}
+
+form button[type="submit"] {
+    transition: background-color 0.4s ease,
+                transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #7986cb;
+    transform: scale(1.15) rotate(-2deg);
+    box-shadow: 0 0 25px #c5cae9;
+}
+
 form {
-    animation: subir 9s ease-out;
+    animation: entradaFormulario 1.5s ease-out;
 }
 
 h2 {
-    animation: subir 0.8s ease-out;
+    animation: entradaTitulo 1.5s ease-out;
 }
 
-@keyframes subir {
-    from {
+@keyframes entradaFormulario {
+    0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(100px) scale(0.8);
     }
 
-    to {
+    60% {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateY(-15px) scale(1.03);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes entradaTitulo {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px) scale(0.7);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateX(10px) scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
     }
 }
 
@@ -217,4 +264,3 @@ h2 {
         transition: none !important;
     }
 }
-
