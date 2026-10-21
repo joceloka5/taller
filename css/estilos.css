@@ -189,7 +189,7 @@ form button[type="submit"]:hover {
 }
 
 form {
-    animation: subir 1s ease-out;
+    animation: subir 9s ease-out;
 }
 
 h2 {
